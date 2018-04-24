@@ -1,8 +1,10 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Networking;
 
-public class PlayerAnimations : MonoBehaviour {
+
+public class PlayerAnimations : NetworkBehaviour {
 
     private Animator anim;
     private float horiz;
@@ -15,11 +17,19 @@ public class PlayerAnimations : MonoBehaviour {
 
     void Start()
     {
+		if (!gameObject.transform.parent.parent.gameObject.GetComponent<NetworkIdentity>().isLocalPlayer) {
+			return;
+		}
         anim = GetComponent<Animator>();
     }
+		
 
     void Update()
     {
+		if (!gameObject.transform.parent.parent.gameObject.GetComponent<NetworkIdentity>().isLocalPlayer) {
+			return;
+		}
+
         // Pour Grounded / AirVelocity voir PlayerMove
 
         //Horizontal direction :

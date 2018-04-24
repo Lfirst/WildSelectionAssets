@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Networking;
 
 public class PlayerLook : MonoBehaviour {
 
@@ -11,12 +12,18 @@ public class PlayerLook : MonoBehaviour {
 	// Use this for initialization
 	void Awake ()
     {
+		//if (!gameObject.transform.parent.parent.gameObject.GetComponent<NetworkIdentity>().isLocalPlayer) {
+			//return;
+		//}
 		Cursor.lockState = CursorLockMode.Locked;
 	}
 	
 	// Update is called once per frame
 	void Update ()
     {
+		if (!gameObject.transform.parent.parent.gameObject.GetComponent<NetworkIdentity>().isLocalPlayer) {
+			return;
+		}
         RotateCamera();
 	}
 

@@ -1,12 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Networking;
 
-public class PlayerMove : MonoBehaviour {
+public class PlayerMove : NetworkBehaviour {
     //Appel aux Objets du jeu
     public CharacterController CharControl;
     public Transform Body;
     public Animator anim;
+	public Camera cam;
 
     //Basics
     public float WalkSpeed = 4 ;
@@ -29,12 +31,21 @@ public class PlayerMove : MonoBehaviour {
     // Use this for initialization
     void Awake()
     {
+		if (!isLocalPlayer) {
+			cam.enabled = false;
+			return;
+		}
+
         CharControl = GetComponent<CharacterController>();
     }
-	
+		
 	// Update is called once per frame
 	void Update ()
     {
+		if (!isLocalPlayer) {
+			return;
+		}
+		cam.enabled = true;
         Crouch();
         MovePlayer();
         Jump();
