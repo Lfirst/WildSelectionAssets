@@ -9,6 +9,10 @@ public class DoorScript : MonoBehaviour {
 	private bool is_open = false;
 	private bool upDoor = false;
 
+	void Start(){
+		door = this.door;
+	}
+
 	void OnTriggerStay(){
 		if (is_open == false && Input.GetKeyDown ("e")) {
 			is_open = true;
