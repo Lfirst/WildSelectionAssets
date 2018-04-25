@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: e6dfc6cc0cb127e43a220e29dbadbfd6
+guid: 9c7256726d429184e8571643feeb9a70
 labels:
 - clean
 - weathered
@@ -22,6 +22,8 @@ labels:
 timeCreated: 1454418774
 licenseType: Store
 NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 0
   userData: 
   assetBundleName: 
   assetBundleVariant: 

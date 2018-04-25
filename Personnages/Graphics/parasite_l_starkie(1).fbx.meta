@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: e0cca589be1e3ec4482bccda0d5da45d
-timeCreated: 1517651628
+timeCreated: 1524593876
 licenseType: Free
 ModelImporter:
   serializedVersion: 22
@@ -150,6 +150,21 @@ ModelImporter:
       assembly: UnityEngine.CoreModule
       name: parasitezombie_Material
     second: {fileID: 2100000, guid: 2f401c0d5b7205545887e8a4e7d9fda2, type: 2}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: parasiteZombie_diffuse
+    second: {fileID: 2800000, guid: fa0c845ab62a24943881e5cbcf3f0f39, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: parasiteZombie_normal
+    second: {fileID: 2800000, guid: 73412105fc574b84f9444efe67993dff, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: parasiteZombie_specular
+    second: {fileID: 2800000, guid: 97444a0c1f8f00e4b875b7f32372d188, type: 3}
   materials:
     importMaterials: 1
     materialName: 2
@@ -161,8 +176,7 @@ ModelImporter:
     resampleCurves: 1
     optimizeGameObjects: 0
     motionNodeName: 
-    rigImportErrors: "Copied Avatar Rig Configuration mis-match. Transform hierarchy
-      does not match:\n\tTransform 'hips' for human bone 'Hips' not found\n"
+    rigImportErrors: 
     rigImportWarnings: 
     animationImportErrors: 
     animationImportWarnings: 
