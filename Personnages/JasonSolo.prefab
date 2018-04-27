@@ -816,6 +816,7 @@ GameObject:
   - component: {fileID: 23705257783399198}
   - component: {fileID: 143428819838100042}
   - component: {fileID: 114889211270969976}
+  - component: {fileID: 114078221205974018}
   m_Layer: 0
   m_Name: JasonSolo
   m_TagString: Untagged
@@ -2681,6 +2682,18 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &114078221205974018
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1538397489195254}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8415bfb6a8190ed4c8d268519bcdd42c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PauseMenu: {fileID: 0}
 --- !u!114 &114080598920823820
 MonoBehaviour:
   m_ObjectHideFlags: 1

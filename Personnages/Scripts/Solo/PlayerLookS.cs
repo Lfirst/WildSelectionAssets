@@ -17,7 +17,12 @@ public class PlayerLookS : MonoBehaviour {
 	// Update is called once per frame
 	void Update ()
     {
-        RotateCamera();
+		bool is_paused = this.transform.parent.parent.GetComponent<Pause> ().GameIsPaused;
+		if (!is_paused) {
+			Cursor.lockState = CursorLockMode.Locked;
+			Cursor.visible = false;
+			RotateCamera ();
+		}
 	}
 
     void RotateCamera()
